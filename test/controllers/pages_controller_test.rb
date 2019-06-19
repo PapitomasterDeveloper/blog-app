@@ -11,4 +11,9 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get directions" do
+    get pages_directions_url
+    assert_response :success
+  end
+
 end
