@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  # Before the User is ever created, we don't wanna show the the current enclose verbs in brackets
+  # Another way of seeing this, is that before the User is ever created, is not going to have access to the previous enclosed verbs
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
