@@ -15,11 +15,11 @@
   <%= @article.user_id %>
 </p>
 
-<h2>Commnts</h2>
+<h2>Comments</h2>
 <% @article.comments.each do |comment| %>
 <p>
 	<strong>Commenter:</strong>
-	<% comment.commenter %>
+	<%= comment.commenter %>
 </p>
 
 <p>
@@ -32,7 +32,7 @@
 <%= form_for([@article, @article.comments.build]) do |f| %>
 <p>
 	<%= f.label :commenter %><br />
-	<%= f.text_field :commnter %>
+	<%= f.text_field :commenter %>
 </p>
 
 <p>
